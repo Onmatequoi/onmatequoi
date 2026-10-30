@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Assistance On mate quoi</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@900&family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap">
+<style>
+  /* Une colonne de lecture sur le fond sombre de l'app ; questions en accordéon, contact en bas */
+  :root {
+    --bg: #140f1b; --surface: #211a2b; --line: #382f45; --ink: #f4eef6; --muted: #b3a8c0; --accent: #ff4d57;
+    --f-display: "Big Shoulders Display", "Arial Narrow", Impact, sans-serif;
+    --f-body: "DM Sans", -apple-system, system-ui, "Segoe UI", sans-serif;
+    color-scheme: dark;
+  }
+  body { background: var(--bg); color: var(--ink); font: 16px/1.6 var(--f-body); }
+  main {
+    max-width: 680px; margin: 0 auto; padding-block: 40px 64px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+    display: grid; gap: 28px;
+  }
+  h1 { font: 900 clamp(40px, 9vw, 56px)/1 var(--f-display); text-transform: uppercase; letter-spacing: .01em; margin: 0; text-wrap: balance; }
+  h1 em { font-style: normal; color: var(--accent); }
+  .lede { margin: 10px 0 0; color: var(--muted); max-width: 60ch; }
+  h2 { font: 900 24px/1.1 var(--f-display); text-transform: uppercase; letter-spacing: .03em; margin: 0 0 4px; }
+  .faq { display: grid; gap: 10px; }
+  details { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 0 18px; }
+  summary { cursor: pointer; font-weight: 700; padding: 16px 0; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; color: var(--accent); font-size: 22px; line-height: 1; }
+  details[open] summary::after { content: "–"; }
+  summary:focus-visible, button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+  details p { margin: 0 0 16px; color: var(--muted); }
+  .contact { border-top: 1px solid var(--line); padding-top: 24px; display: grid; gap: 12px; }
+  .contact p { margin: 0; color: var(--muted); }
+  .mail { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+  .mail code { font: 700 17px var(--f-body); color: var(--ink); user-select: all; word-break: break-all; }
+  button { font: 700 14px var(--f-body); color: var(--ink); background: transparent; border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; cursor: pointer; }
+  button:hover { border-color: var(--accent); }
+  a { color: var(--ink); }
+  .foot { color: var(--muted); font-size: 14px; }
+</style>
+<style>body{margin:0}</style>
+</head>
+<body>
+
+
+<main>
+  <header>
+    <h1>On mate quoi <em>ce soir ?</em></h1>
+    <p class="lede">Aide et contact pour l'application iPhone et Android. Une question, un bug, un film mal classé ? Les réponses aux questions les plus fréquentes sont ci-dessous.</p>
+  </header>
+
+  <section>
+    <h2>Questions fréquentes</h2>
+    <div class="faq">
+      <details>
+        <summary>Comment ça marche ?</summary>
+        <p>Réponds aux 7 questions du quiz (film ou série, ambiance, genres, durée, époque, origine, plateformes), puis swipe : à droite si le titre te tente, à gauche sinon, vers le haut si tu l'as déjà vu. Tes coups de cœur sont gardés dans ta liste.</p>
+      </details>
+      <details>
+        <summary>Comment jouer à plusieurs ?</summary>
+        <p>Sur l'accueil, touche « Créer un groupe » et partage le code à 4 caractères. Les autres le saisissent dans « Rejoindre ». Chacun répond au quiz et swipe sur son téléphone ; dès qu'un titre plaît à tout le monde, c'est un match. S'il y a plusieurs matchs, lancez la finale pour les départager en duels.</p>
+      </details>
+      <details>
+        <summary>Un film n'est plus disponible sur ma plateforme</summary>
+        <p>Les disponibilités viennent de JustWatch via TMDB et changent chaque semaine. Vérifie sur la plateforme avant de lancer le film. Si une erreur dure, écris-nous avec le titre et la plateforme.</p>
+      </details>
+      <details>
+        <summary>Les propositions ne correspondent pas à mes réponses</summary>
+        <p>Quand peu de titres collent à toutes tes réponses, l'app complète avec des titres proches, signalés sur la carte (« Autre durée », « Autre genre »…). Le récapitulatif indique aussi la réponse qui bloque le plus : modifie-la pour avoir plus de choix.</p>
+      </details>
+      <details>
+        <summary>Faut-il créer un compte ?</summary>
+        <p>Non. L'app est gratuite, sans compte, sans publicité et sans suivi. En groupe, seul un prénom ou un pseudo est demandé.</p>
+      </details>
+      <details>
+        <summary>Comment supprimer mes données ?</summary>
+        <p>Dans la salle de ton groupe, touche « Supprimer mes données du groupe ». Désinstaller l'app efface aussi ce qui est gardé sur ton téléphone. Le détail est dans la <a href="confidentialite.html">politique de confidentialité</a>.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Nous écrire</h2>
+    <p>Une autre question ou un problème ? Écris à cette adresse, avec le modèle de ton téléphone si c'est un bug. Réponse sous quelques jours.</p>
+    <div class="mail">
+      <code id="mail">vitapro.official@gmail.com</code>
+      <button type="button" id="copy">Copier l'adresse</button>
+    </div>
+  </section>
+
+  <p class="foot"><a href="confidentialite.html">Politique de confidentialité</a> · Les données des films et séries proviennent de TMDB et les disponibilités de JustWatch. Ce produit utilise l'API TMDB mais n'est ni approuvé ni certifié par TMDB.</p>
+</main>
+
+<script>
+  document.getElementById("copy").addEventListener("click", async (e) => {
+    const b = e.currentTarget, text = document.getElementById("mail").textContent;
+    try { await navigator.clipboard.writeText(text); b.textContent = "Adresse copiée"; }
+    catch {
+      const r = document.createRange(); r.selectNodeContents(document.getElementById("mail"));
+      const s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = "Adresse sélectionnée";
+    }
+    setTimeout(() => { b.textContent = "Copier l'adresse"; }, 2000);
+  });
+</script>
+
+</body>
+</html>
